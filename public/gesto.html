@@ -1,0 +1,126 @@
+<html lang="es">
+
+<head>
+    <title>Visual Recognition Demo</title>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="og:title" content="IBM Watson Visual Recognition" />
+    <meta name="og:description" content="Visual Recognition." />
+    <link rel="icon" href="images/favicon.ico" type="image/x-icon" />
+   
+    <link rel="stylesheet" href="assets/css/main.css" />
+    <link rel="stylesheet" href="assets/css/extra.css" />
+</head>
+
+<body>
+    <!-- Nav -->
+    <nav id="nav">
+        <ul class="container">
+            <li><a href="index.html">IBM BANK</a></li>
+        </ul>
+    </nav>
+
+    <!-- Home -->
+    <div class="checkout-wrap">
+        <ul class="checkout-bar" style="z-index:0">
+            <li class="visited first">
+                <a href="index.html">Principal</a>
+            </li>
+            <!--<li class="previous visited">Shipping & Billing</li> -->
+            <li class="previous visited">DNI</li>
+            <li class="active">Gesto</li>
+            <li class="">Completo</li>
+        </ul>
+    </div>
+    <div class="wrapper style1 first">
+        <article class="container" id="top">
+            <div class="tab-panels--tab-content raw">
+                <div class="_demo--container">
+                    <header>
+                        <h2 style="text-align:center; color: #E3BC13">Reconocimiento de Gesto</h2>
+                        <h3 style="text-align:left"> Haz click sobre la camara y carga una imagen mimetizando la siguiente imagen</h3>
+                    </header>
+                    <form id="use--fileupload" data-upload-template-id="template-upload-use" class="use--form use--dropzone hideload">
+                        <input id="classifier_id" type="hidden" name="classifier_id" value="" />
+                        <div style="text-align:center; width:100%;"><label for="use--file" class="use--file-input-button base--button" style="margin: 0 auto;"><img src="images/icons/camera.png" style="width:100%;" /></label><input
+                                id="use--file" type="file" name="images_file" accept="image/*" title="Choose an image to upload"
+                                class="use--file-input" /></div>
+                        <div>
+                            <div class="item" style="width:100%; text-align:center; margin-top:3em;">
+                                <img src="" width="200px" class="people" style="margin:0 auto;">
+                            </div>
+                        </div>
+                        <div class="use--url" style="display:none;">
+                            <div class="use--invalid-url display-none">URL no valida</div>
+                            <div class="use--invalid-image-url display-none">La URL debe ser .JPG, .GIF, or .PNG.</div><input type="text" placeholder="Ingresá la URL de una imagen"
+                                name="url" class="use--url-input base--input" /><input type="hidden" name="image_data" class="use--image-data-input base--input"
+                            /></div>
+                    </form>
+                    <div class="loading use--loading display-none">
+                        <div class="loader-container">
+                            <svg viewBox="25 25 50 50" class="loader">
+                                <circle cx="50" cy="50" r="20" class="loader__path"></circle>
+                            </svg>
+                        </div>
+                        <p class="base--p use--loading-message loading--message">Por favor, espere unos segundos...</p>
+                    </div>
+                    <div class="error use--error display-none"><img src="images/icons/alert.svg" class="use--error-image error--image" />
+                        <p class="base--p use--error-message error--message">Ups! El servicio no está disponible en este momentoo...</p>
+                    </div>
+                    <div class="use--output display-none">
+                        <div class="use--output-row">
+                            <div class="use--output-image-container"><img class="use--output-image" style="width:100%;" /></div>
+                            <div id="box" class="boxes"></div>
+                            <div class="use--output-data"></div>
+                            <div style="width:100%; text-align:center; margin-top:3rem; margin-bottom:3rem;">
+                            <button type="submit" onclick="location.href='completo.html'" style="margin:0 auto;">Enviar y Terminar</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </article>
+    </div>
+    <!-- Contact -->
+    <div class="wrapper style4">
+        <article id="contact" class="container 75%">
+            <header>
+                <h2>IBM Innovation</h2>
+                <p>Watson Visual Recognition</p>
+            </header>
+            <div>
+                <div class="row">
+					<div class="12u">
+						<hr />
+						<h3>Utilizá el prototipo...</h3>
+						<ul class="social">
+							<li><a href="https://github.com/FernandoCarrizo/BANKK" class="icon fa-github"><img src="images/icons/github.png"><span class="label">Github</span></a></li>
+						</ul>
+						<hr />
+					</div>
+				</div>
+			</div>
+		</article>
+	</div>
+
+    <!-- Scripts -->
+    <script src="assets/js/jquery.min.js"></script>
+    <script src="assets/js/jquery.scrolly.min.js"></script>
+    <script src="assets/js/skel.min.js"></script>
+    <script src="assets/js/skel-viewport.min.js"></script>
+    <script src="assets/js/util.js"></script>
+    <!--[if lte IE 8]><script src="assets/js/ie/respond.min.js"></script><![endif]-->
+    <script src="assets/js/main.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/pace/1.0.2/pace.min.js" data-pace-options="{&quot;ajax&quot;: false}"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.11.4/jquery-ui.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/blueimp-file-upload/9.5.7/jquery.fileupload.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/blueimp-file-upload/9.5.7/jquery.iframe-transport.min.js"></script>
+    <script src="js/bundle.js"></script>
+    <script src="js/vendors/tealeaf.js"></script>
+    <script src="js/myscripts.js"></script>
+
+</body>
+
+</html>

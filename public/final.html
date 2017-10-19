@@ -13,37 +13,43 @@
     <!--[if lte IE 9]><link rel="stylesheet" href="assets/css/ie9.css" /><![endif]-->
 </head>
 
-<body onload="load()">
+<body style=" background: url(images/victory.jpeg) no-repeat center center fixed; 
+        -webkit-background-size: cover;
+        -moz-background-size: cover;
+        -o-background-size: cover;
+        background-size: cover;" onload="load()" >
 
+  <div id="back"> <a href="index.html" style="text-decoration:none; color:white;"> <--- Volver al inicio </a> </div>
   
-    <div id="box">
-        <p class="title" style="color:rgb(66, 67, 68);"> ¡Descubre a que personaje de League of Legends te pareces! </p>
-        <p style="color:rgb(66, 67, 68);"> Invocadores que ya participaron: <span id="personas"></span>  </p>
-        <a href="subir_foto.html" class="button center">Participar!</a>
-        <a href="final.html" class="buttonew center">Resultados</a>
-        <p></p>
-        <div class="left"> 
-      <!--          <a href="index.html" class="inicio">    <span> ← Volver al inicio </span> </a> -->
-        </div>  
-        <div class="right">   
-          <img src="images/ibm_watson_icon.ico" size=20%/> <span style="color:rgb(66, 67, 68);">IBM Watson Visual Recognition</span>
-        </div>          
-    </div>    
-    
+  
+  <div id="winners">  
         
-<script>
+</div>
+
+
+
+
+	
+ <script>
 
 function load(){
 	
-	$.get("http://juradocosplays.mybluemix.net/count", function(data, status){
-       var cant = data;
-       document.getElementById("personas").innerHTML=cant;
-		
+	$.get("http://juradocosplays.mybluemix.net/list", function(data, status){
+       var first = data;
+       document.getElementById("first").innerHTML=first;	
     });	
-
+    
+   
+    
+    
 }
 
-</script>
+
+</script> 
+
+
+
+
 
 
     <!-- Scripts -->

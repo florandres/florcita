@@ -1,0 +1,107 @@
+<html lang="es">
+
+<head>
+    <title>Visual Recognition Demo</title>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="og:title" content="IBM Watson Visual Recognition" />
+    <meta name="og:description" content="Visual Recognition." />
+    <link rel="icon" href="images/favicon.ico" type="image/x-icon" />
+   <link rel="stylesheet" href="assets/css/style.css" /> 
+    <link rel="stylesheet" href="assets/css/main.css" />
+    <link rel="stylesheet" href="assets/css/extra.css" />
+    
+
+</head>
+
+<body >
+
+    <div style="
+    background-color: rgba(255,255,255,0.7); border-radius: 3px; margin: 5em; 
+    padding-top:2em; padding-bottom: 4em;
+    ">
+    <div>
+                <article class="container" id="top">
+                    <div class="tab-panels--tab-content raw">
+                        <div class="_demo--container">
+                            <header>
+                                <h2 style="text-align:center; color:rgb(66, 67, 68); ">Subí tu foto!</h2>
+                                <h3 style="text-align:center; color:rgb(66,67,68);"> Invocador:
+                                <input type="text" name="nombre" id="nombre" required="">  </h3>                                    
+                                <h3 style="text-align:center; color:rgb(66, 67, 68); "> Haz click sobre la camara y carga una imagen tuya de frente.</h3>
+                            </header>
+                            <form id="use--fileupload" data-upload-template-id="template-upload-use" class="use--form use--dropzone hideload">
+                                <input id="classifier_id" type="hidden" name="classifier_id" value="" />
+                                <div class="camara"><label for="use--file" class="use--file-input-button base--button">
+                                    <img src="images/icons/camera.png" style="width:100%;" />
+                                
+                                
+                                
+                                </label><input id="use--file" type="file" name="images_file" accept="image/*" title="Choose an image to upload"
+                                        class="use--file-input" /></div>
+                                <div class="use--url" style="display:none">
+                                    <div class="use--invalid-url display-none">URL no valida</div>
+                                    <div class="use--invalid-image-url display-none">La URL debe ser .JPG, .GIF, or .PNG.</div><input type="text" placeholder="Ingresá la URL de una imagen" name="url" class="use--url-input base--input" /><input type="hidden" name="image_data" class="use--image-data-input base--input"
+                                    /></div>
+                            </form>
+                            <div class="loading use--loading display-none">
+                                <div class="loader-container">
+                                     <svg viewBox="25 25 50 50" class="loader">
+                                        <circle cx="50" cy="50" r="20" class="loader__path"></circle> 
+                                        <!-- <img src="images/loading-indicator.gif"/> -->
+                                    <!-- </svg> -->
+                                </div>
+                                <p class="base--p use--loading-message loading--message">Por favor, esperá unos segundos...</p>
+                            </div>
+                            <div class="error use--error display-none"><img src="images/icons/alert.svg" class="use--error-image error--image" />
+                                <p class="base--p use--error-message error--message">Ups! El servicio no está disponible en este momentoo...</p>
+                            </div>
+                            <div class="use--output display-none">
+                                <div class="use--output-row">
+                                    <div class="use--output-image-container"><img class="use--output-image" style="width:100%;" /></div>
+                                  <!--   <div id="box" class="boxes"></div> -->
+                                    <div class="use--output-data"></div>
+                                   <!--  <a href="javascript:window.location.href=('https://twitter.com/home?status=Watson%20te%20dice%20a%20quien%20te%20pareces!%20'+document.URL)"><img src="/images/icons/Twitter-icon.png" alt="Compartir en Twitter" style="width:30px;height:30px;">
+                                    </a> -->
+                                    <div style="width:100%; text-align:center; margin-top:3rem;">
+                                        <button type="submit" onclick="location.href='subir_foto.html'" style="margin:0 auto;">Otra vez!</button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </article>
+            </div>
+  
+        </div>
+
+
+          
+
+
+
+
+
+            
+   
+
+    <!-- Scripts -->
+    <script src="assets/js/jquery.min.js"></script>
+    <script src="assets/js/jquery.scrolly.min.js"></script>
+    <script src="assets/js/skel.min.js"></script>
+    <script src="assets/js/skel-viewport.min.js"></script>
+    <script src="assets/js/util.js"></script>
+    <!--[if lte IE 8]><script src="assets/js/ie/respond.min.js"></script><![endif]-->
+    <script src="assets/js/main.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/pace/1.0.2/pace.min.js" data-pace-options="{&quot;ajax&quot;: false}"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.11.4/jquery-ui.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/blueimp-file-upload/9.5.7/jquery.fileupload.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/blueimp-file-upload/9.5.7/jquery.iframe-transport.min.js"></script>
+    <script src="js/bundle.js"></script>
+    <script src="js/vendors/tealeaf.js"></script>
+    <script src="js/myscripts.js"></script>
+</body>
+
+</html>

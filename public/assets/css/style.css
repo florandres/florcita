@@ -1,0 +1,124 @@
+   body{
+        font-family: sans-serif;
+        color: #888;
+        background: url(images/fondo1.jpeg) no-repeat center center fixed; 
+        -webkit-background-size: cover;
+        -moz-background-size: cover;
+        -o-background-size: cover;
+        background-size: cover;
+    }
+  img{
+      width: 4em;
+      height: auto;
+  }
+
+  #box{
+      background-color: rgba(255, 255, 255, 0.7);
+      border-radius: 3px;
+      height: auto;
+      margin: 5em;
+      padding: 3em;
+      padding-bottom: 5em;
+
+
+  }
+
+  .button{
+    transition: background-color .2s ease-in-out;
+    position: relative;
+    display: inline-block;
+    color: #FFFFFF !important;
+    text-decoration: none;
+    font-weight: 700;
+    border: 0;
+    outline: 0;
+    cursor: pointer;
+    border-radius: 8px;
+    text-shadow: -1px -1px 0.5px rgba(0, 0, 0, 0.5);
+    overflow: hidden;
+    box-shadow: inset 0px 0px 0px 1px rgba(0, 0, 0, 0.5), inset 0px 2px 1px 0px rgba(255, 255, 255, 0.75);
+    background-color: #1D1574;
+    font-size: 1.5em;
+    letter-spacing: -0.025em;
+    padding: 0.80em 1.55em 0.80em 1.55em;
+    margin-left:40%;
+  }
+
+  .button:hover {
+    background-color: #2C06E9;
+  }
+  
+  .buttonew{
+  	 transition: background-color .2s ease-in-out;
+    position: relative;
+    display: inline-block;
+    color: #FFFFFF !important;
+    text-decoration: none;
+    font-weight: 700;
+    border: 0;
+    outline: 0;
+    cursor: pointer;
+    border-radius: 8px;
+    text-shadow: -1px -1px 0.5px rgba(0, 0, 0, 0.5);
+    overflow: hidden;
+    box-shadow: inset 0px 0px 0px 1px rgba(0, 0, 0, 0.5), inset 0px 2px 1px 0px rgba(255, 255, 255, 0.75);
+    background-color:  #c4b998;
+    font-size: 1.5em;
+    letter-spacing: -0.025em;
+    padding: 0.80em 1.35em 0.80em 1.35em;
+    margin-left:40%;
+  	
+  }
+  
+  .buttonew:hover {
+    background-color: #c9aa71;
+  }
+  
+ 
+  
+  
+
+  .left{
+    position: relative;
+    float: left;
+    overflow: auto;
+  }
+
+  .right{
+    position: relative;
+    float: right;
+    overflow: auto;
+  }
+.title{
+    font-weight: 700;
+    font-size: 2em;
+    text-shadow: 1px white; 
+}
+
+.inicio{
+    text-decoration: none;
+    color: #5493CA;
+    font-weight: 300px;
+    text-decoration-line: none;
+}
+
+.center{
+   text-align: center;
+}
+
+#winners {
+position: absolute;
+width: 100px;
+height: 50px;
+top: 70%;
+left: 50%;
+margin-left: -18px;
+margin-top: -25px;
+}​
+
+.winner{
+	color: blue;
+	font-size:12px;
+	
+	
+}
